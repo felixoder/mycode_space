@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
   credentials: true,
-  origin: "https://mycode-space-client.vercel.app",
+  origin: "http://localhost:3000",
 }));
 app.use(express.urlencoded({ extended: true }));
 
