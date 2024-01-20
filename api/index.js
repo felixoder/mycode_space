@@ -32,7 +32,7 @@ async function connection() {
 connection();
 app.get('/',(req,res)=>{
   res.json('hello')
-}
+})
 app.post('/register', async (req, res) => {
     const { username, password, email } = req.body;
     try {
