@@ -11,7 +11,7 @@ export default function PostPage() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`https://mycode-space-api.vercel.app//post/${id}`)
+    fetch(`https://mycode-space-api.vercel.app/post/${id}`)
       .then((response) => response.json())
       .then((postInfo) => {
         setPostInfo(postInfo);
