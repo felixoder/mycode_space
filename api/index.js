@@ -15,14 +15,14 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
   credentials: true,
-  origin: "https://my-code.vercel.app",
+  origin: "https://mycode-space-client.vercel.app/",
 }));
 app.use(express.urlencoded({ extended: true }));
 
 async function connection() {
   try {
-    await mongoose.connect(process.env.MONGO_URI
-      // "mongodb+srv://my_code:BF5Lpc8IjEVbaA4N@cluster0.zmuiene.mongodb.net/?retryWrites=true&w=majority"
+    await mongoose.connect(
+   "mongodb+srv://my_code:BF5Lpc8IjEVbaA4N@cluster0.zmuiene.mongodb.net/?retryWrites=true&w=majority"
     );
     console.log("connected");
   } catch (error) {
