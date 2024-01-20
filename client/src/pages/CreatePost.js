@@ -12,7 +12,7 @@ export default function CreatePost() {
   async function createNewPost(ev) {
     ev.preventDefault();
 
-    const response = await fetch("https://mycode-space-api.vercel.app/post", {
+    const response = await fetch("http://localhost:4000/post", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
