@@ -35,7 +35,7 @@ export default function EditPost() {
     console.log("Request Body:", Object.fromEntries(data)); // Log the request body
 
     // Instead of using FormData
-    const response = await fetch(`http://localhost:4000/post/${id}`, {
+    const response = await fetch(`https://code-009.onrender.com/post/${id}`, {
       method: "PUT",
       body: JSON.stringify({ title, summery, content }),
       headers: {
