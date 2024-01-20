@@ -8,7 +8,7 @@ export default function IndexPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('mycode-space-api.vercel.app/post');
+        const response = await fetch('https://mycode-space-api.vercel.app/post');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
