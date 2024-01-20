@@ -19,12 +19,11 @@
     "react-syntax-highlighter": "^15.5.0",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "cd api && node index.js",
-   
-    "server": "cd api && nodemon index.js",
-    "client" : "npm start --prefix ./client",
-   "dev" : "concurrently\"npm start\"\"npm run client\"",
+ "scripts": {
+    "start": "node api/index.js",
+    "server": "nodemon api/index.js",
+    "client": "npm start --prefix ./client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
