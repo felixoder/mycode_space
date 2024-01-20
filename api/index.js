@@ -21,8 +21,8 @@ app.use(express.urlencoded({ extended: true }));
 
 async function connection() {
   try {
-    await mongoose.connect(process.env.MONGO_URI
-      // "mongodb+srv://my_code:BF5Lpc8IjEVbaA4N@cluster0.zmuiene.mongodb.net/?retryWrites=true&w=majority"
+    await mongoose.connect(
+   "mongodb+srv://my_code:BF5Lpc8IjEVbaA4N@cluster0.zmuiene.mongodb.net/?retryWrites=true&w=majority"
     );
     console.log("connected");
   } catch (error) {
@@ -30,7 +30,9 @@ async function connection() {
   }
 }
 connection();
-
+app.get('/',(req,res)=>{
+  res.json('hello')
+}
 app.post('/register', async (req, res) => {
     const { username, password, email } = req.body;
     try {

@@ -10,7 +10,7 @@ export default function Register() {
     ev.preventDefault();
     
     try {
-      const response = await fetch('http://localhost:4000/register', {
+      const response = await fetch('https://mycode-space-api.vercel.app/register', {
         body: JSON.stringify({ username, password, email }),
         method: 'POST',
         headers: {
