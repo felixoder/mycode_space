@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "client/**",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "https://code-009.onrender.com/api/$1",
+        "methods": ["GET", "POST", "PUT", "DELETE"]
+      },
+      {
+        "src": "/(.*)",
+        "dest": "client/$1"
+      }
+    ]
+  }
+  
