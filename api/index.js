@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
   credentials: true,
-  origin: "http://localhost:3000",
+  origin: "https://65acc817865d582f94fce824--felixcodez.netlify.app",
 }));
 app.use(express.urlencoded({ extended: true }));
 
