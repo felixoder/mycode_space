@@ -16,12 +16,16 @@ export default function Navbar() {
     });
   }, []);
 
-  function logout() {
-    fetch('https://code-009.onrender.com/logout', {
-      credentials: 'include',
-      method: 'POST',
-    });
-    setUserInfo(null);
+  async function logout() {
+    try {
+      await fetch('https://code-009.onrender.com/logout', {
+        credentials: 'include',
+        method: 'POST',
+      });
+      setUserInfo(null);
+    } catch (error) {
+      console.error('Logout error:', error.message);
+    }
   }
 
   const username = userInfo?.username;
