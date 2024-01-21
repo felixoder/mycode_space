@@ -13,7 +13,7 @@ export default function EditPost() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`https://mycode-space-api.vercel.app/post/${id}`)
+    fetch(`https://code-009.onrender.com/post/${id}`)
       .then((response) => {
         response.json().then((postInfo) => {
           setTitle(postInfo.title);
