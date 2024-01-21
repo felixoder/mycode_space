@@ -31,8 +31,8 @@ export default function IndexPage() {
         ) : (
           posts.length > 0 &&
           posts.map((post) => (
-            <div key={post._id} className="col" style={{ height: '300px' }}>
-              <Post {...post} className="h-100"style={{ height: '300px' }} />
+            <div key={post._id} className="col">
+              <Post {...post} className="h-100" />
             </div>
           ))
         )}
