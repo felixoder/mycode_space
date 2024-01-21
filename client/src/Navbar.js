@@ -17,7 +17,7 @@ export default function Navbar() {
   }, []);
 
   function logout() {
-    fetch('http://localhost:4000/logout', {
+    fetch('https://code-009.onrender.com/logout', {
       credentials: 'include',
       method: 'POST',
     });
