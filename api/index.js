@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
   credentials: true,
-  origin: "https://65acc817865d582f94fce824--felixcodez.netlify.app",
+  origin: "https://mycode-space-frontend.vercel.app",
 }));
 app.use(express.urlencoded({ extended: true }));
 
